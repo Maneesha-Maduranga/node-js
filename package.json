@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Vanila node js",
   "main": "server.js",
-  
+  "type":"module",  
   "scripts": {
     "run": "node server.js",
     "dev":"nodemon server.js"

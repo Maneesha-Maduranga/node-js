@@ -1,4 +1,4 @@
-const http = require('http');
+import http from 'node:http';
 const port = 5000;
 
 const server = http.createServer((req, res) => {
