@@ -1,0 +1,75 @@
+[
+    {
+      "projectId": "23456",
+      "name": "Marketing Campaign",
+      "description": "Launch a new marketing campaign for product X",
+      "revenue": 75000,
+      "startDate": "2023-02-15",
+      "endDate": "2023-05-15"
+    },
+    {
+      "projectId": "34567",
+      "name": "Website Redesign",
+      "description": "Redesign the company website for a modern look",
+      "revenue": 120000,
+      "startDate": "2023-03-10",
+      "endDate": "2023-08-31"
+    },
+    {
+      "projectId": "45678",
+      "name": "Product Development",
+      "description": "Develop a new software product for clients",
+      "revenue": 200000,
+      "startDate": "2023-04-01",
+      "endDate": "2023-12-31"
+    },
+    {
+      "projectId": "56789",
+      "name": "Event Planning",
+      "description": "Organize a corporate event for employees",
+      "revenue": 50000,
+      "startDate": "2023-06-15",
+      "endDate": "2023-06-30"
+    },
+    {
+      "projectId": "67890",
+      "name": "Infrastructure Upgrade",
+      "description": "Upgrade the company's IT infrastructure",
+      "revenue": 90000,
+      "startDate": "2023-05-01",
+      "endDate": "2023-10-31"
+    },
+    {
+      "projectId": "78901",
+      "name": "Content Creation",
+      "description": "Produce content for social media and blogs",
+      "revenue": 60000,
+      "startDate": "2023-03-20",
+      "endDate": "2023-07-31"
+    },
+    {
+      "projectId": "89012",
+      "name": "Research Project",
+      "description": "Conduct market research for a new product line",
+      "revenue": 80000,
+      "startDate": "2023-02-01",
+      "endDate": "2023-09-30"
+    },
+    {
+      "projectId": "90123",
+      "name": "Consulting Services",
+      "description": "Provide consulting services to a client",
+      "revenue": 45000,
+      "startDate": "2023-04-10",
+      "endDate": "2023-06-30"
+    },
+    {
+      "projectId": "10123",
+      "name": "Product Testing",
+      "description": "Test and QA for a new software release",
+      "revenue": 30000,
+      "startDate": "2023-07-10",
+      "endDate": "2023-08-31"
+    }
+  ]
+  
