@@ -1,5 +1,13 @@
 let projects = require('../projects.json');
 
+class Project {
+  constructor(name, description, revenue) {
+    this.name = name;
+    this.description = description;
+    this.revenue = revenue;
+  }
+}
+
 function findAll() {
   return new Promise((resolve, reject) => {
     resolve(projects);

@@ -4,6 +4,7 @@ const port = 5000;
 const {
   getAllProjects,
   getProject,
+  createProject,
 } = require('./controller/projectController');
 
 const server = http.createServer(async (req, res) => {
@@ -15,6 +16,8 @@ const server = http.createServer(async (req, res) => {
   ) {
     const id = req.url.split('/')[4];
     getProject(req, res, id);
+  } else if (req.url == '/v1/api/products' && req.method == 'POST') {
+    createProject(req, res);
   } else {
     res.writeHead(404, { 'Content-Type': 'application/json' });
     res.end(JSON.stringify({ message: 'No routes found with url' }));

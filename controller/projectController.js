@@ -28,7 +28,24 @@ async function getProject(req, res, id) {
   }
 }
 
+async function createProject(req, res) {
+  try {
+    let body = '';
+
+    req.on('data', (chunk) => {
+      body += chunk.toString();
+    });
+
+    req.on('end', () => {
+      
+    });
+  } catch (error) {
+    console.log('Erro');
+  }
+}
+
 module.exports = {
   getAllProjects,
   getProject,
+  createProject,
 };
