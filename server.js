@@ -1,14 +1,23 @@
 const http = require('http');
 const port = 5000;
 
-//Controllers
-const { getAllProject } = require('./controller/projectController');
+const {
+  getAllProjects,
+  getProject,
+} = require('./controller/projectController');
 
-const server = http.createServer((req, res) => {
+const server = http.createServer(async (req, res) => {
   if (req.url == '/v1/api/products' && req.method == 'GET') {
-    getAllProject(req, res);
+    getAllProjects(req, res);
+  } else if (
+    req.url.match(/\/api\/products\/([0-9]+)/) &&
+    req.method == 'GET'
+  ) {
+    const id = req.url.split('/')[4];
+    getProject(req, res, id);
   } else {
-    res.writeHead(400, { 'Content-Type': 'application/json' });
+    res.writeHead(404, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify({ message: 'No routes found with url' }));
   }
 });
 
