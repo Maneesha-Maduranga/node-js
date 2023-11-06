@@ -7,7 +7,7 @@ const {
   createProject,
 } = require('./controller/projectController');
 
-const server = http.createServer(async (req, res) => {
+const server = http.createServer((req, res) => {
   if (req.url == '/v1/api/products' && req.method == 'GET') {
     getAllProjects(req, res);
   } else if (

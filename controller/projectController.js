@@ -1,4 +1,5 @@
 const Project = require('../model/projectModel');
+const { getPostData } = require('../utils');
 
 async function getAllProjects(req, res) {
   try {
@@ -30,18 +31,21 @@ async function getProject(req, res, id) {
 
 async function createProject(req, res) {
   try {
-    let body = '';
+    const body = await getPostData(req);
 
-    req.on('data', (chunk) => {
-      body += chunk.toString();
-    });
+    const { name, description, revenue } = JSON.parse(body);
 
-    req.on('end', () => {
-      
-    });
-  } catch (error) {
-    console.log('Erro');
-  }
+    const project = {
+      name,
+      description,
+      revenue,
+    };
+
+    const newProject = await Project.create(project);
+
+    res.writeHead(201, { 'Content-Type': 'application/json' });
+    return res.end(JSON.stringify(newProject));
+  } catch (error) {}
 }
 
 module.exports = {
